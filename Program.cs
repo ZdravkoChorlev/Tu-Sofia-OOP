@@ -1,19 +1,21 @@
 ﻿using System;
-using System.Text;
+using System.IO;
 
-    class Stack
+class FileCreate
+{
+    static void Main()
     {
-        static void Main(string[] args)
+        using (StreamWriter writer = new StreamWriter("Programa.txt"))
         {
-            Encoding win = Encoding.GetEncoding("Windows-1251");
-            var cars = new StackExample();
-            cars.Push("Иван");
-
-            while (!cars.Empty)
+            for (int i = 1; i < 1000; i++)
             {
-                string name = cars.Pop();
-                Console.WriteLine(name);
+                writer.WriteLine("Ще програмирам по 6 часа на седмица!");
             }
         }
-    }
 
+       // using (StreamReader reader = new StreamReader("Programa.txt"))
+       // {
+        //    Console.WriteLine(reader.ReadToEnd());
+       // }
+    }
+}
