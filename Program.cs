@@ -13,9 +13,9 @@ class FileCreate
             }
         }
 
-       // using (StreamReader reader = new StreamReader("Programa.txt"))
-       // {
-        //    Console.WriteLine(reader.ReadToEnd());
-       // }
+       using (StreamReader reader = new StreamReader("Programa.txt"))
+       {
+            Console.WriteLine(reader.ReadToEnd());
+       }
     }
 }
